@@ -6,7 +6,6 @@
         "instanceId":"5985f269ea9ca",
         "key":"process_cpu_seconds_total",
         "metricType":"counter",
-        "name":"oracle_collector_plugin_process_cpu_seconds_total",
         "unit":"seconds"
     },
     {
@@ -16,7 +15,6 @@
         "instanceId":"5985f26a25e8d",
         "key":"process_max_fds",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_process_max_fds"
     },
     {
         "agentType":"prometheus",
@@ -25,7 +23,6 @@
         "instanceId":"5985f273e4f22",
         "key":"process_open_fds",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_process_open_fds"
     },
     {
         "agentType":"prometheus",
@@ -34,7 +31,6 @@
         "instanceId":"5985f28560c1a",
         "key":"process_start_time_seconds",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_process_start_time_seconds",
         "unit":"seconds"
     },
     {
@@ -44,7 +40,6 @@
         "instanceId":"5985f28eea05a",
         "key":"process_virtual_memory_bytes",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_process_virtual_memory_bytes",
         "unit":"bytes"
     },
     {
@@ -54,7 +49,6 @@
         "instanceId":"5985f28f90e29",
         "key":"process_resident_memory_bytes",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_process_resident_memory_bytes",
         "unit":"bytes"
     },
     {
@@ -64,7 +58,6 @@
         "instanceId":"598635fd415f4",
         "key":"http_response_size_bytes",
         "metricType":"summary",
-        "name":"oracle_collector_plugin_http_response_size_bytes",
         "paramDefine":[
             {
                 "default":"prometheus",
@@ -104,7 +97,6 @@
         "instanceId":"598636022b3a1",
         "key":"http_request_duration_microseconds",
         "metricType":"summary",
-        "name":"oracle_collector_plugin_http_request_duration_microseconds",
         "paramDefine":[
             {
                 "default":"prometheus",
@@ -144,7 +136,6 @@
         "instanceId":"59863603df5f9",
         "key":"http_request_size_bytes",
         "metricType":"summary",
-        "name":"oracle_collector_plugin_http_request_size_bytes",
         "paramDefine":[
             {
                 "default":"prometheus",
@@ -184,7 +175,6 @@
         "instanceId":"5ac40dee92d8c",
         "key":"oracledb_exporter_scrapes_total",
         "metricType":"counter",
-        "name":"oracle_collector_plugin_oracledb_exporter_scrapes_total"
     },
     {
         "agentType":"prometheus",
@@ -193,7 +183,6 @@
         "instanceId":"5ac40dee92de7",
         "key":"oracledb_exporter_last_scrape_duration_seconds",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_exporter_last_scrape_duration_seconds",
         "unit":"seconds"
     },
     {
@@ -203,7 +192,6 @@
         "instanceId":"5ac40dee92e36",
         "key":"oracledb_exporter_last_scrape_error",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_exporter_last_scrape_error"
     },
     {
         "agentType":"prometheus",
@@ -212,7 +200,6 @@
         "instanceId":"5ac40dee92e86",
         "key":"oracledb_up",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_up"
     },
     {
         "agentType":"prometheus",
@@ -221,7 +208,6 @@
         "instanceId":"5ac40e6584047",
         "key":"oracledb_wait_time_concurrency",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_concurrency"
     },
     {
         "agentType":"prometheus",
@@ -230,7 +216,6 @@
         "instanceId":"5ac40e6584091",
         "key":"oracledb_process_count",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_process_count"
     },
     {
         "agentType":"prometheus",
@@ -239,7 +224,6 @@
         "instanceId":"5ac40e65840cb",
         "key":"oracledb_activity_user_commits",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_activity_user_commits"
     },
     {
         "agentType":"prometheus",
@@ -248,7 +232,6 @@
         "instanceId":"5ac40e658410a",
         "key":"oracledb_activity_user_rollbacks",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_activity_user_rollbacks"
     },
     {
         "agentType":"prometheus",
@@ -257,7 +240,6 @@
         "instanceId":"5ac40e658414e",
         "key":"oracledb_wait_time_other",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_other"
     },
     {
         "agentType":"prometheus",
@@ -266,7 +248,6 @@
         "instanceId":"5ac40e658419a",
         "key":"oracledb_wait_time_system_io",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_system_io"
     },
     {
         "agentType":"prometheus",
@@ -275,7 +256,6 @@
         "instanceId":"5ac40e65841df",
         "key":"oracledb_wait_time_scheduler",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_scheduler"
     },
     {
         "agentType":"prometheus",
@@ -284,7 +264,6 @@
         "instanceId":"5ac40e6584233",
         "key":"oracledb_asm_diskgroup_free",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_asm_diskgroup_free",
         "paramDefine":[
             {
                 "default":"ARCH",
@@ -308,7 +287,6 @@
         "instanceId":"5ac40e6584297",
         "key":"oracledb_activity_execute_count",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_activity_execute_count"
     },
     {
         "agentType":"prometheus",
@@ -317,7 +295,6 @@
         "instanceId":"5ac40e65842ca",
         "key":"oracledb_resource_limit_value",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_resource_limit_value",
         "paramDefine":[
             {
                 "default":"branches",
@@ -341,7 +318,6 @@
         "instanceId":"5ac40e65842f5",
         "key":"oracledb_wait_time_commit",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_commit"
     },
     {
         "agentType":"prometheus",
@@ -350,7 +326,6 @@
         "instanceId":"5ac40e658432b",
         "key":"oracledb_wait_time_configuration",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_configuration"
     },
     {
         "agentType":"prometheus",
@@ -359,7 +334,6 @@
         "instanceId":"5ac40e6584355",
         "key":"oracledb_wait_time_user_io",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_user_io"
     },
     {
         "agentType":"prometheus",
@@ -368,7 +342,6 @@
         "instanceId":"5ac40e6584382",
         "key":"oracledb_tablespace_max_bytes",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_tablespace_max_bytes",
         "paramDefine":[
             {
                 "default":"SYSAUX",
@@ -404,7 +377,6 @@
         "instanceId":"5ac40e65843b0",
         "key":"oracledb_sessions_value",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_sessions_value",
         "paramDefine":[
             {
                 "default":"ACTIVE",
@@ -439,7 +411,6 @@
         "instanceId":"5ac40e65843ec",
         "key":"oracledb_tablespace_bytes",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_tablespace_bytes",
         "paramDefine":[
             {
                 "default":"SYSAUX",
@@ -475,7 +446,6 @@
         "instanceId":"5ac40e6584430",
         "key":"oracledb_asm_diskgroup_total",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_asm_diskgroup_total",
         "paramDefine":[
             {
                 "default":"ARCH",
@@ -499,7 +469,6 @@
         "instanceId":"5ac40e658449a",
         "key":"oracledb_wait_time_application",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_application"
     },
     {
         "agentType":"prometheus",
@@ -508,7 +477,6 @@
         "instanceId":"5ac40e65844dd",
         "key":"oracledb_tablespace_free",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_tablespace_free",
         "paramDefine":[
             {
                 "default":"SYSAUX",
@@ -543,7 +511,6 @@
         "instanceId":"5ac40e6584507",
         "key":"oracledb_activity_parse_count_total",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_activity_parse_count_total"
     },
     {
         "agentType":"prometheus",
@@ -552,7 +519,6 @@
         "instanceId":"5ac40e6584530",
         "key":"oracledb_wait_time_cluster",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_cluster"
     },
     {
         "agentType":"prometheus",
@@ -561,7 +527,6 @@
         "instanceId":"5ac40e658455b",
         "key":"oracledb_resource_current_utilization",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_resource_current_utilization",
         "paramDefine":[
             {
                 "default":"branches",
@@ -585,6 +550,5 @@
         "instanceId":"5ac40e6584586",
         "key":"oracledb_wait_time_network",
         "metricType":"gauge",
-        "name":"oracle_collector_plugin_oracledb_wait_time_network"
     }
 ]
