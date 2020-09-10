@@ -14,7 +14,7 @@
         "help":"Maximum number of open file descriptors.",
         "instanceId":"5985f26a25e8d",
         "key":"process_max_fds",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -22,7 +22,7 @@
         "help":"Number of open file descriptors.",
         "instanceId":"5985f273e4f22",
         "key":"process_open_fds",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -174,7 +174,7 @@
         "help":"Total number of times Oracle DB was scraped for metrics.",
         "instanceId":"5ac40dee92d8c",
         "key":"oracledb_exporter_scrapes_total",
-        "metricType":"counter",
+        "metricType":"counter"
     },
     {
         "agentType":"prometheus",
@@ -191,7 +191,7 @@
         "help":"Whether the last scrape of metrics from Oracle DB resulted in an error (1 for error, 0 for success).",
         "instanceId":"5ac40dee92e36",
         "key":"oracledb_exporter_last_scrape_error",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -199,7 +199,7 @@
         "help":"Whether the Oracle database server is up.",
         "instanceId":"5ac40dee92e86",
         "key":"oracledb_up",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -207,7 +207,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e6584047",
         "key":"oracledb_wait_time_concurrency",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -215,7 +215,7 @@
         "help":"Gauge metric with count of processes.",
         "instanceId":"5ac40e6584091",
         "key":"oracledb_process_count",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -223,7 +223,7 @@
         "help":"Generic counter metric from v$sysstat view in Oracle.",
         "instanceId":"5ac40e65840cb",
         "key":"oracledb_activity_user_commits",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -231,7 +231,7 @@
         "help":"Generic counter metric from v$sysstat view in Oracle.",
         "instanceId":"5ac40e658410a",
         "key":"oracledb_activity_user_rollbacks",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -239,7 +239,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e658414e",
         "key":"oracledb_wait_time_other",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -247,7 +247,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e658419a",
         "key":"oracledb_wait_time_system_io",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -255,7 +255,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e65841df",
         "key":"oracledb_wait_time_scheduler",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -286,7 +286,7 @@
         "help":"Generic counter metric from v$sysstat view in Oracle.",
         "instanceId":"5ac40e6584297",
         "key":"oracledb_activity_execute_count",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -317,7 +317,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e65842f5",
         "key":"oracledb_wait_time_commit",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -325,7 +325,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e658432b",
         "key":"oracledb_wait_time_configuration",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -333,7 +333,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e6584355",
         "key":"oracledb_wait_time_user_io",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -468,7 +468,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e658449a",
         "key":"oracledb_wait_time_application",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -510,7 +510,7 @@
         "help":"Generic counter metric from v$sysstat view in Oracle.",
         "instanceId":"5ac40e6584507",
         "key":"oracledb_activity_parse_count_total",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -518,7 +518,7 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e6584530",
         "key":"oracledb_wait_time_cluster",
-        "metricType":"gauge",
+        "metricType":"gauge"
     },
     {
         "agentType":"prometheus",
@@ -549,6 +549,6 @@
         "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
         "instanceId":"5ac40e6584586",
         "key":"oracledb_wait_time_network",
-        "metricType":"gauge",
+        "metricType":"gauge"
     }
 ]
