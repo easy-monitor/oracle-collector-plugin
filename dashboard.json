@@ -3,7 +3,7 @@
         "_object_id": "_DASHBOARD",
         "instanceId": "5ac43e50dd1f3",
         "name": "oracle",
-        "namespace": "resource_monitor._ORACLE_INSTANCE",
+        "namespace": "resource-monitor._ORACLE_INSTANCE",
         "panels": [
             {
                 "brickConf": "{\"brick\":\"general-charts.statistic-card\",\"properties\":{\"showCard\":false,\"icon\":{\"lib\":\"fa\",\"icon\":\"circle\"}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-select\",\"args\":[{\"model\":\"easyops._ORACLE_INSTANCE\",\"statements\":[{\"name\":\"oracledb_process_count\",\"alias\":\"oracledb_process_count\"}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${QUERY.instanceId|string}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"now-5m\"},{\"name\":\"oracledb_process_count\",\"operator\":\"!=\",\"value\":null}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}],\"limit\":{\"limit\":1}}],\"transform\":{\"value\":\"<% _.get(DATA.list, \\\"[0].oracledb_process_count\\\") %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
