@@ -1,84 +1,90 @@
 ---
-proc_list: []
+script_source: easyops
+start_component: ""
+start_component_params: ""
+stop_component: ""
+stop_component_params: ""
+proc_list:
+- proc_name: oracledb_exporter 
+  proc_num_min: ~
+  proc_num_max: ~
+  pid_file: ~
 port_list: []
 proc_guard: ""
-port_guard: ""
-start_script: "#!/bin/bash\n\nif ! type getopt >/dev/null 2>&1 ; then\n  echo \"Error:
-  command \\\"getopt\\\" is not found\" >&2\n  exit 1\nfi\n\ngetopt_cmd=`getopt -o
-  h -a -l help,oracle-host:,oracle-port:,oracle-user:,oracle-password:,oracle-sid:,oracle-service:,oracle-remote-collect:,exporter-host:,exporter-port:
-  -n \"start.sh\" -- \"$@\"`\nif [ $? -ne 0 ] ; then\n    exit 1\nfi\neval set --
-  \"$getopt_cmd\"\n\noracle_host=\"127.0.0.1\"\noracle_port=1521\noracle_user=\"\"\noracle_password=\"\"\noracle_sid=\"\"\noracle_service=\"\"\noracle_remote_collect=\"false\"\n\nexporter_host=\"127.0.0.1\"\nexporter_port=9161\n\nprint_help()
-  {\n    echo \"Usage:\"\n    echo \"    start_script.sh [options]\"\n    echo \"
-  \   start_script.sh --oracle-host 127.0.0.1 --oracle-port 1521 --oracle-user root
-  [options]\"\n    echo \"\"\n    echo \"Options:\"\n    echo \"  -h, --help                    show
-  help\"\n    echo \"      --oracle-host             the address of oracle server
-  (\\\"127.0.0.1\\\" by default)\"\n    echo \"      --oracle-port             the
-  port of oracle server (1521 by default)\"\n    echo \"      --oracle-user             the
-  user to log in to oracle server\"\n    echo \"      --oracle-password         the
-  password to log in to oracle server\"\n    echo \"      --oracle-service          the
-  service instance of oracle server\"\n    echo \"      --oracle-sid              the
-  sid  of oracle server\"\n\n    echo \"      --oracle-remote-collect   whether use
-  remote collect\"\n\n    echo \"      --exporter-host        the listen address of
-  exporter (\\\"127.0.0.1\\\" by default)\"\n    echo \"      --exporter-port        the
-  listen port of exporter (9161 by default)\"\n}\n\nwhile true\ndo\n    case \"$1\"
-  in\n        -h | --help)\n            print_help\n            shift 1\n            exit
-  0\n            ;;\n        --oracle-host)\n            case \"$2\" in\n                \"\")\n
-  \                   shift 2  \n                    ;;\n                *)\n                    oracle_host=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --oracle-port)\n            case \"$2\" in\n                \"\")\n                    shift
-  2  \n                    ;;\n                *)\n                    oracle_port=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --oracle-user)\n            case \"$2\" in\n                \"\")\n                    shift
-  2  \n                    ;;\n                *)\n                    oracle_user=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --oracle-password)\n            case \"$2\" in\n                \"\")\n
-  \                   shift 2  \n                    ;;\n                *)\n                    oracle_password=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --oracle-sid)\n            case \"$2\" in\n                \"\")\n                    shift
-  2\n                    ;;\n                *)\n                    oracle_sid=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --oracle-service)\n            case \"$2\" in\n                \"\")\n                    shift
-  2\n                    ;;\n                *)\n                    oracle_service=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --oracle-remote-collect)\n            case \"$2\" in\n                \"\")\n
-  \                   shift 2\n                    ;;\n                *)\n                    oracle_remote_collect=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --exporter-host)\n            case \"$2\" in\n                \"\")\n                    shift
-  2  \n                    ;;\n                *)\n                    exporter_host=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --exporter-port)\n            case \"$2\" in\n                \"\")\n                    shift
-  2  \n                    ;;\n                *)\n                    exporter_port=\"$2\"\n
-  \                   shift 2;\n                    ;;\n            esac\n            ;;\n
-  \       --)\n            shift\n            break\n            ;;\n        *)\n
-  \           echo \"Error: argument \\\"$1\\\" is invalid\" >&2\n            echo
-  \"\"\n            print_help\n            exit 1\n            ;;\n    esac\ndone\n\nEASYOPS_COLLECTOR_oracle_server=$oracle_host\nEASYOPS_COLLECTOR_oracle_port=$oracle_port\nEASYOPS_COLLECTOR_oracle_username=$oracle_user\nEASYOPS_COLLECTOR_oracle_password=$oracle_password\nEASYOPS_COLLECTOR_oracle_sid=$oracle_sid\nEASYOPS_COLLECTOR_oracle_service=$oracle_service\nEASYOPS_COLLECTOR_oracle_remote_collect=$oracle_remote_collect\n\n\nEASYOPS_COLLECTOR_exporter_host=$exporter_host\nEASYOPS_COLLECTOR_exporter_port=$exporter_port\n\nif
-  [ \"$oracle_remote_collect\" = \"false\" ]; then\n    export DATA_SOURCE_NAME=\"$oracle_user/$oracle_password@$oracle_sid\"\nelse\n
-  \   export DATA_SOURCE_NAME=\"$oracle_user/$oracle_password@//$oracle_host:$oracle_port/$oracle_service\"\nfi\n\n\nexport
-  LD_LIBRARY_PATH=$PWD\"/src/oracle_instantclient_basiclite\":$LD_LIBRARY_PATH\n\ncd
-  ./src/oracledb_exporter\nnohup ./oracledb_exporter --log.level error --web.listen-address
-  $exporter_host:$exporter_port &\n"
+port_guard: none
+start_script: |
+  #!/usr/local/easyops/python/bin/python
+  # -*- coding: UTF-8 -*-
+  
+  
+  import copy
+  import os
+  import subprocess
+  
+  
+  def run_command(command, cwd=".", env={}, shell=False, close_fds=True):
+      process = subprocess.Popen(
+          command,
+          cwd=cwd,
+          env=copy.deepcopy(os.environ).update(env),
+          shell=shell,
+          close_fds=close_fds
+      )
+  
+      return process.returncode
+  
+  
+  if __name__ == "__main__":
+      package_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+  
+      argument_map = {
+          '--oracle-server': 'oracle_server',
+          '--oracle-port': 'oracle_port',
+          '--oracle-username': 'oracle_username',
+          '--oracle-password': 'oracle_password',
+          '--oracle-sid': 'oracle_sid',
+          '--oracle-service': 'oracle_service',
+          '--oracle-remote-collect': 'oracle_remote_collect',
+          '--exporter-host': 'exporter_host',
+          '--exporter-port': 'exporter_port'
+      }
+      
+      arguments = []
+      for argument, env in argument_map.iteritems():
+          env_value = os.environ.get('EASYOPS_COLLECTOR_' + env)
+          if env_value is not None:
+              arguments.append('{} {}'.format(argument, env_value))
+  
+      command = 'sh ./script/deploy/start_script.sh {} &'.format(' '.join(arguments))
+      run_command(command, shell=True, cwd=package_path)
+start_script_type: python
 user_pre_check_script: ""
+user_pre_check_script_type: shell
 user_check_script: ""
-stop_script: |-
-  #!/bin/bash
-
-  ps -ef | grep oracledb_exporter | awk \'{print $2}\' | xargs kill -9
+user_check_script_type: shell
+stop_script: ""
+stop_script_type: python
 monitor_script: ""
 user: root
-baseImageId: ""
-start_script_type: shell
-user_pre_check_script_type: shell
-user_check_script_type: shell
-stop_script_type: shell
 user_defined_global_variables: []
-restart_script: ""
+baseImageId: ""
 install_prescript: ""
 install_postscript: ""
 update_prescript: ""
 update_postscript: ""
-rollback_prescript: ""
-rollback_postscript: ""
-resolve_script: ""
 uninstall_prescript: ""
 uninstall_postscript: ""
+rollback_prescript: ""
+rollback_postscript: ""
+install_prescript_type: shell
+install_postscript_type: shell
+update_prescript_type: shell
+update_postscript_type: shell
+uninstall_prescript_type: shell
+uninstall_postscript_type: shell
+rollback_prescript_type: shell
+rollback_postscript_type: shell
+restart_script: ""
+resolve_script: ""
+templates: []
 ...

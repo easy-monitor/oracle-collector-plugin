@@ -5,7 +5,6 @@ name: oracle_collector_plugin
 version: 1.0.0
 
 category: 数据库
-
 params:
   - oracle_server
   - oracle_port
