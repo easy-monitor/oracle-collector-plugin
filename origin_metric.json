@@ -1,554 +1,554 @@
 [
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Total user and system CPU time spent in seconds.",
-        "instanceId":"5985f269ea9ca",
-        "key":"process_cpu_seconds_total",
-        "metricType":"counter",
-        "unit":"seconds"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Total user and system CPU time spent in seconds.",
+        "instanceId": "5985f269ea9ca",
+        "key": "process_cpu_seconds_total",
+        "metricType": "counter",
+        "unit": "seconds"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Maximum number of open file descriptors.",
-        "instanceId":"5985f26a25e8d",
-        "key":"process_max_fds",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Maximum number of open file descriptors.",
+        "instanceId": "5985f26a25e8d",
+        "key": "process_max_fds",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Number of open file descriptors.",
-        "instanceId":"5985f273e4f22",
-        "key":"process_open_fds",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Number of open file descriptors.",
+        "instanceId": "5985f273e4f22",
+        "key": "process_open_fds",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Start time of the process since unix epoch in seconds.",
-        "instanceId":"5985f28560c1a",
-        "key":"process_start_time_seconds",
-        "metricType":"gauge",
-        "unit":"seconds"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Start time of the process since unix epoch in seconds.",
+        "instanceId": "5985f28560c1a",
+        "key": "process_start_time_seconds",
+        "metricType": "gauge",
+        "unit": "seconds"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Virtual memory size in bytes.",
-        "instanceId":"5985f28eea05a",
-        "key":"process_virtual_memory_bytes",
-        "metricType":"gauge",
-        "unit":"bytes"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Virtual memory size in bytes.",
+        "instanceId": "5985f28eea05a",
+        "key": "process_virtual_memory_bytes",
+        "metricType": "gauge",
+        "unit": "bytes"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Resident memory size in bytes.",
-        "instanceId":"5985f28f90e29",
-        "key":"process_resident_memory_bytes",
-        "metricType":"gauge",
-        "unit":"bytes"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Resident memory size in bytes.",
+        "instanceId": "5985f28f90e29",
+        "key": "process_resident_memory_bytes",
+        "metricType": "gauge",
+        "unit": "bytes"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"The HTTP response sizes in bytes.",
-        "instanceId":"598635fd415f4",
-        "key":"http_response_size_bytes",
-        "metricType":"summary",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "The HTTP response sizes in bytes.",
+        "instanceId": "598635fd415f4",
+        "key": "http_response_size_bytes",
+        "metricType": "summary",
+        "paramDefine": [
             {
-                "default":"prometheus",
-                "name":"handler",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "prometheus",
+                "name": "handler",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"0.5",
-                "name":"quantile",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "0.5",
+                "name": "quantile",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"prometheus",
-                "name":"handler",
-                "readOnly":false
+                "default": "prometheus",
+                "name": "handler",
+                "readOnly": false
             },
             {
-                "default":"0.5",
-                "name":"quantile",
-                "readOnly":false
+                "default": "0.5",
+                "name": "quantile",
+                "readOnly": false
             },
             {
-                "name":"_key_type",
-                "readOnly":false
+                "name": "_key_type",
+                "readOnly": false
             }
         ],
-        "unit":"bytes"
+        "unit": "bytes"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"The HTTP request latencies in microseconds.",
-        "instanceId":"598636022b3a1",
-        "key":"http_request_duration_microseconds",
-        "metricType":"summary",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "The HTTP request latencies in microseconds.",
+        "instanceId": "598636022b3a1",
+        "key": "http_request_duration_microseconds",
+        "metricType": "summary",
+        "paramDefine": [
             {
-                "default":"prometheus",
-                "name":"handler",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "prometheus",
+                "name": "handler",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"0.5",
-                "name":"quantile",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "0.5",
+                "name": "quantile",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"prometheus",
-                "name":"handler",
-                "readOnly":false
+                "default": "prometheus",
+                "name": "handler",
+                "readOnly": false
             },
             {
-                "default":"0.5",
-                "name":"quantile",
-                "readOnly":false
+                "default": "0.5",
+                "name": "quantile",
+                "readOnly": false
             },
             {
-                "name":"_key_type",
-                "readOnly":false
+                "name": "_key_type",
+                "readOnly": false
             }
         ],
-        "unit":"seconds"
+        "unit": "seconds"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"The HTTP request sizes in bytes.",
-        "instanceId":"59863603df5f9",
-        "key":"http_request_size_bytes",
-        "metricType":"summary",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "The HTTP request sizes in bytes.",
+        "instanceId": "59863603df5f9",
+        "key": "http_request_size_bytes",
+        "metricType": "summary",
+        "paramDefine": [
             {
-                "default":"prometheus",
-                "name":"handler",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "prometheus",
+                "name": "handler",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"0.5",
-                "name":"quantile",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "0.5",
+                "name": "quantile",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"prometheus",
-                "name":"handler",
-                "readOnly":false
+                "default": "prometheus",
+                "name": "handler",
+                "readOnly": false
             },
             {
-                "default":"0.5",
-                "name":"quantile",
-                "readOnly":false
+                "default": "0.5",
+                "name": "quantile",
+                "readOnly": false
             },
             {
-                "name":"_key_type",
-                "readOnly":false
+                "name": "_key_type",
+                "readOnly": false
             }
         ],
-        "unit":"bytes"
+        "unit": "bytes"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Total number of times Oracle DB was scraped for metrics.",
-        "instanceId":"5ac40dee92d8c",
-        "key":"oracledb_exporter_scrapes_total",
-        "metricType":"counter"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Total number of times Oracle DB was scraped for metrics.",
+        "instanceId": "5ac40dee92d8c",
+        "key": "oracledb_exporter_scrapes_total",
+        "metricType": "counter"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Duration of the last scrape of metrics from Oracle DB.",
-        "instanceId":"5ac40dee92de7",
-        "key":"oracledb_exporter_last_scrape_duration_seconds",
-        "metricType":"gauge",
-        "unit":"seconds"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Duration of the last scrape of metrics from Oracle DB.",
+        "instanceId": "5ac40dee92de7",
+        "key": "oracledb_exporter_last_scrape_duration_seconds",
+        "metricType": "gauge",
+        "unit": "seconds"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Whether the last scrape of metrics from Oracle DB resulted in an error (1 for error, 0 for success).",
-        "instanceId":"5ac40dee92e36",
-        "key":"oracledb_exporter_last_scrape_error",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Whether the last scrape of metrics from Oracle DB resulted in an error (1 for error, 0 for success).",
+        "instanceId": "5ac40dee92e36",
+        "key": "oracledb_exporter_last_scrape_error",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Whether the Oracle database server is up.",
-        "instanceId":"5ac40dee92e86",
-        "key":"oracledb_up",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Whether the Oracle database server is up.",
+        "instanceId": "5ac40dee92e86",
+        "key": "oracledb_up",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e6584047",
-        "key":"oracledb_wait_time_concurrency",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e6584047",
+        "key": "oracledb_wait_time_concurrency",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Gauge metric with count of processes.",
-        "instanceId":"5ac40e6584091",
-        "key":"oracledb_process_count",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Gauge metric with count of processes.",
+        "instanceId": "5ac40e6584091",
+        "key": "oracledb_process_count",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$sysstat view in Oracle.",
-        "instanceId":"5ac40e65840cb",
-        "key":"oracledb_activity_user_commits",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$sysstat view in Oracle.",
+        "instanceId": "5ac40e65840cb",
+        "key": "oracledb_activity_user_commits",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$sysstat view in Oracle.",
-        "instanceId":"5ac40e658410a",
-        "key":"oracledb_activity_user_rollbacks",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$sysstat view in Oracle.",
+        "instanceId": "5ac40e658410a",
+        "key": "oracledb_activity_user_rollbacks",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e658414e",
-        "key":"oracledb_wait_time_other",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e658414e",
+        "key": "oracledb_wait_time_other",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e658419a",
-        "key":"oracledb_wait_time_system_io",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e658419a",
+        "key": "oracledb_wait_time_system_io",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e65841df",
-        "key":"oracledb_wait_time_scheduler",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e65841df",
+        "key": "oracledb_wait_time_scheduler",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Free space available on ASM disk group.",
-        "instanceId":"5ac40e6584233",
-        "key":"oracledb_asm_diskgroup_free",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Free space available on ASM disk group.",
+        "instanceId": "5ac40e6584233",
+        "key": "oracledb_asm_diskgroup_free",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"ARCH",
-                "name":"name",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "ARCH",
+                "name": "name",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"ARCH",
-                "name":"name",
-                "readOnly":false
+                "default": "ARCH",
+                "name": "name",
+                "readOnly": false
             }
         ]
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$sysstat view in Oracle.",
-        "instanceId":"5ac40e6584297",
-        "key":"oracledb_activity_execute_count",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$sysstat view in Oracle.",
+        "instanceId": "5ac40e6584297",
+        "key": "oracledb_activity_execute_count",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$resource_limit view in Oracle (UNLIMITED: -1).",
-        "instanceId":"5ac40e65842ca",
-        "key":"oracledb_resource_limit_value",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$resource_limit view in Oracle (UNLIMITED: -1).",
+        "instanceId": "5ac40e65842ca",
+        "key": "oracledb_resource_limit_value",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"branches",
-                "name":"resource_name",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "branches",
+                "name": "resource_name",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"branches",
-                "name":"resource_name",
-                "readOnly":false
+                "default": "branches",
+                "name": "resource_name",
+                "readOnly": false
             }
         ]
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e65842f5",
-        "key":"oracledb_wait_time_commit",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e65842f5",
+        "key": "oracledb_wait_time_commit",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e658432b",
-        "key":"oracledb_wait_time_configuration",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e658432b",
+        "key": "oracledb_wait_time_configuration",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e6584355",
-        "key":"oracledb_wait_time_user_io",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e6584355",
+        "key": "oracledb_wait_time_user_io",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric of tablespaces max bytes in Oracle.",
-        "instanceId":"5ac40e6584382",
-        "key":"oracledb_tablespace_max_bytes",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric of tablespaces max bytes in Oracle.",
+        "instanceId": "5ac40e6584382",
+        "key": "oracledb_tablespace_max_bytes",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"SYSAUX",
-                "name":"tablespace",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "SYSAUX",
+                "name": "tablespace",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"PERMANENT",
-                "name":"type",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "PERMANENT",
+                "name": "type",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"SYSAUX",
-                "name":"tablespace",
-                "readOnly":false
+                "default": "SYSAUX",
+                "name": "tablespace",
+                "readOnly": false
             },
             {
-                "default":"PERMANENT",
-                "name":"type",
-                "readOnly":false
+                "default": "PERMANENT",
+                "name": "type",
+                "readOnly": false
             }
         ],
-        "unit":"bytes"
+        "unit": "bytes"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Gauge metric with count of sessions by status and type.",
-        "instanceId":"5ac40e65843b0",
-        "key":"oracledb_sessions_value",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Gauge metric with count of sessions by status and type.",
+        "instanceId": "5ac40e65843b0",
+        "key": "oracledb_sessions_value",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"ACTIVE",
-                "name":"status",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "ACTIVE",
+                "name": "status",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"BACKGROUND",
-                "name":"type",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "BACKGROUND",
+                "name": "type",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"ACTIVE",
-                "name":"status",
-                "readOnly":false
+                "default": "ACTIVE",
+                "name": "status",
+                "readOnly": false
             },
             {
-                "default":"BACKGROUND",
-                "name":"type",
-                "readOnly":false
+                "default": "BACKGROUND",
+                "name": "type",
+                "readOnly": false
             }
         ]
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric of tablespaces bytes in Oracle.",
-        "instanceId":"5ac40e65843ec",
-        "key":"oracledb_tablespace_bytes",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric of tablespaces bytes in Oracle.",
+        "instanceId": "5ac40e65843ec",
+        "key": "oracledb_tablespace_bytes",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"SYSAUX",
-                "name":"tablespace",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "SYSAUX",
+                "name": "tablespace",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"PERMANENT",
-                "name":"type",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "PERMANENT",
+                "name": "type",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"SYSAUX",
-                "name":"tablespace",
-                "readOnly":false
+                "default": "SYSAUX",
+                "name": "tablespace",
+                "readOnly": false
             },
             {
-                "default":"PERMANENT",
-                "name":"type",
-                "readOnly":false
+                "default": "PERMANENT",
+                "name": "type",
+                "readOnly": false
             }
         ],
-        "unit":"bytes"
+        "unit": "bytes"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Total size of ASM disk group.",
-        "instanceId":"5ac40e6584430",
-        "key":"oracledb_asm_diskgroup_total",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Total size of ASM disk group.",
+        "instanceId": "5ac40e6584430",
+        "key": "oracledb_asm_diskgroup_total",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"ARCH",
-                "name":"name",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "ARCH",
+                "name": "name",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"ARCH",
-                "name":"name",
-                "readOnly":false
+                "default": "ARCH",
+                "name": "name",
+                "readOnly": false
             }
         ]
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e658449a",
-        "key":"oracledb_wait_time_application",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e658449a",
+        "key": "oracledb_wait_time_application",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric of tablespaces free bytes in Oracle.",
-        "instanceId":"5ac40e65844dd",
-        "key":"oracledb_tablespace_free",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric of tablespaces free bytes in Oracle.",
+        "instanceId": "5ac40e65844dd",
+        "key": "oracledb_tablespace_free",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"SYSAUX",
-                "name":"tablespace",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "SYSAUX",
+                "name": "tablespace",
+                "readOnly": false,
+                "valueType": "string"
             },
             {
-                "default":"PERMANENT",
-                "name":"type",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "PERMANENT",
+                "name": "type",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"SYSAUX",
-                "name":"tablespace",
-                "readOnly":false
+                "default": "SYSAUX",
+                "name": "tablespace",
+                "readOnly": false
             },
             {
-                "default":"PERMANENT",
-                "name":"type",
-                "readOnly":false
+                "default": "PERMANENT",
+                "name": "type",
+                "readOnly": false
             }
         ]
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$sysstat view in Oracle.",
-        "instanceId":"5ac40e6584507",
-        "key":"oracledb_activity_parse_count_total",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$sysstat view in Oracle.",
+        "instanceId": "5ac40e6584507",
+        "key": "oracledb_activity_parse_count_total",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e6584530",
-        "key":"oracledb_wait_time_cluster",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e6584530",
+        "key": "oracledb_wait_time_cluster",
+        "metricType": "gauge"
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$resource_limit view in Oracle (current value).",
-        "instanceId":"5ac40e658455b",
-        "key":"oracledb_resource_current_utilization",
-        "metricType":"gauge",
-        "paramDefine":[
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$resource_limit view in Oracle (current value).",
+        "instanceId": "5ac40e658455b",
+        "key": "oracledb_resource_current_utilization",
+        "metricType": "gauge",
+        "paramDefine": [
             {
-                "default":"branches",
-                "name":"resource_name",
-                "readOnly":false,
-                "valueType":"string"
+                "default": "branches",
+                "name": "resource_name",
+                "readOnly": false,
+                "valueType": "string"
             }
         ],
-        "tagDefine":[
+        "tagDefine": [
             {
-                "default":"branches",
-                "name":"resource_name",
-                "readOnly":false
+                "default": "branches",
+                "name": "resource_name",
+                "readOnly": false
             }
         ]
     },
     {
-        "agentType":"prometheus",
-        "dataType":"double",
-        "help":"Generic counter metric from v$waitclassmetric view in Oracle.",
-        "instanceId":"5ac40e6584586",
-        "key":"oracledb_wait_time_network",
-        "metricType":"gauge"
+        "agentType": "prometheus",
+        "dataType": "double",
+        "help": "Generic counter metric from v$waitclassmetric view in Oracle.",
+        "instanceId": "5ac40e6584586",
+        "key": "oracledb_wait_time_network",
+        "metricType": "gauge"
     }
 ]

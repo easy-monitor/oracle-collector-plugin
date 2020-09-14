@@ -27,9 +27,9 @@ if __name__ == "__main__":
         '--oracle-port': 'oracle_port',
         '--oracle-username': 'oracle_username',
         '--oracle-password': 'oracle_password',
+        '--oracle-remote-collect': 'oracle_remote_collect',
         '--oracle-sid': 'oracle_sid',
         '--oracle-service': 'oracle_service',
-        '--oracle-remote-collect': 'oracle_remote_collect',
         '--exporter-host': 'exporter_host',
         '--exporter-port': 'exporter_port'
     }

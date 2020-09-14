@@ -14,7 +14,7 @@ if ! type getopt >/dev/null 2>&1 ; then
   exit 1
 fi
 
-getopt_cmd=`getopt -o h -a -l help:,oracle-host:,oracle-port:,oracle-user:,oracle-password:,oracle-sid:,oracle-service:,oracle-remote-collect:,exporter-host:,exporter-port: -n "start_script.sh" -- "$@"`
+getopt_cmd=`getopt -o h -a -l help:,oracle-host:,oracle-port:,oracle-user:,oracle-password:,oracle-remote-collect:,oracle-sid:,oracle-service:,exporter-host:,exporter-port: -n "start_script.sh" -- "$@"`
 if [ $? -ne 0 ] ; then
     exit 1
 fi
@@ -25,9 +25,9 @@ oracle_host="127.0.0.1"
 oracle_port=1521
 oracle_user=""
 oracle_password=""
+oracle_remote_collect="false"
 oracle_sid=""
 oracle_service=""
-oracle_remote_collect="false"
 exporter_host="127.0.0.1"
 exporter_port=9161
 
@@ -42,9 +42,9 @@ print_help() {
     echo "      --oracle-port              the port of oracle server (1521 by default)"
     echo "      --oracle-user              the user to log in to oracle server"
     echo "      --oracle-password          the password to log in to oracle server"
+    echo "      --oracle-remote-collect    whether use remote collect"
     echo "      --oracle-service           the service instance of oracle server"
     echo "      --oracle-sid               the sid  of oracle server"
-    echo "      --oracle-remote-collect    whether use remote collect"
     echo "      --exporter-host            the listen address of exporter (\"127.0.0.1\" by default)"
     echo "      --exporter-port            the listen port of exporter (9161 by default)"
 }
@@ -101,6 +101,17 @@ do
                     ;;
             esac
             ;;
+        --oracle-remote-collect)
+            case "$2" in
+                "")
+                    shift 2
+                    ;;
+                *)
+                    oracle_remote_collect="$2"
+                    shift 2;
+                    ;;
+            esac
+            ;;
         --oracle-sid)
             case "$2" in
                 "")
@@ -119,17 +130,6 @@ do
                     ;;
                 *)
                     oracle_service="$2"
-                    shift 2;
-                    ;;
-            esac
-            ;;
-        --oracle-remote-collect)
-            case "$2" in
-                "")
-                    shift 2
-                    ;;
-                *)
-                    oracle_remote_collect="$2"
                     shift 2;
                     ;;
             esac
