@@ -20,7 +20,7 @@ def run_command(command, cwd=".", env={}, shell=False, close_fds=True):
 
 
 if __name__ == "__main__":
-    package_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    package_path = os.path.dirname(os.path.abspath(__file__))
 
     argument_map = {
         '--oracle-server': 'oracle_server',
@@ -40,5 +40,5 @@ if __name__ == "__main__":
         if env_value is not None:
             arguments.append('{} {}'.format(argument, env_value))
 
-    command = 'sh ./script/deploy/start_script.sh {} &'.format(' '.join(arguments))
+    command = 'sh ./deploy/start_script.sh {} &'.format(' '.join(arguments))
     run_command(command, shell=True, cwd=package_path)

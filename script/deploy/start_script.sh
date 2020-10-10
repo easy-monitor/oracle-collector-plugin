@@ -2,7 +2,7 @@
 
 
 PACKAGE_NAME=oracle-collector-plugin
-PACKAGE_PATH=$(dirname $(dirname "$(cd `dirname $0`; pwd)"))
+PACKAGE_PATH=$(dirname "$(cd `dirname $0`; pwd)")
 LOG_DIRECTORY=$PACKAGE_PATH/log
 LOG_FILE=$LOG_DIRECTORY/$PACKAGE_NAME.log
 
@@ -184,6 +184,6 @@ else
     export DATA_SOURCE_NAME="$oracle_user/$oracle_password@//$oracle_host:$oracle_port/$oracle_service"
 fi
 
-cd $PACKAGE_PATH/script
+cd $PACKAGE_PATH
 chmod +x src/oracledb_exporter
 ./src/oracledb_exporter --default.metrics conf/default-metrics.toml --web.listen-address $exporter_host:$exporter_port 2>&1 | tee -a $LOG_FILE
