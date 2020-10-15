@@ -39,6 +39,11 @@ EasyOps Oracle 监控插件包是适用于 EasyOps 新版监控平台，专门�
 
 1. 确认采集的 Oracle 实例具体的监听地址和端口以及服务名称和服务实例 ID。
 2. 确认是否使用远程采集以及用来连接 Oracle 的用户和密码。
+3. 由于第三方的 Oracle Exporter 使用了 PL/SQL 查询 `V$SESSION` 表的指标数据，需要连接 Oracle 的用户直接具有该表的权限。可通过以下命令指定表进行授权，请替换其中的 `${ORACLE_USER}` 为具体的连接用户。
+
+```SQL
+GRANT SELECT ON V$SESSION TO ${ORACLE_USER}
+```
 
 ## 使用方法
 
