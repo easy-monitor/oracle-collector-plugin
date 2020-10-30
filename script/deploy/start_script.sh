@@ -60,7 +60,7 @@ do
         --oracle-host)
             case "$2" in
                 "")
-                    shift 2  
+                    shift 2
                     ;;
                 *)
                     oracle_host="$2"
@@ -71,7 +71,7 @@ do
         --oracle-port)
             case "$2" in
                 "")
-                    shift 2  
+                    shift 2
                     ;;
                 *)
                     oracle_port="$2"
@@ -82,7 +82,7 @@ do
         --oracle-user)
             case "$2" in
                 "")
-                    shift 2  
+                    shift 2
                     ;;
                 *)
                     oracle_user="$2"
@@ -93,7 +93,7 @@ do
         --oracle-password)
             case "$2" in
                 "")
-                    shift 2  
+                    shift 2
                     ;;
                 *)
                     oracle_password="$2"
@@ -137,7 +137,7 @@ do
         --exporter-host)
             case "$2" in
                 "")
-                    shift 2  
+                    shift 2
                     ;;
                 *)
                     exporter_host="$2"
@@ -148,7 +148,7 @@ do
         --exporter-port)
             case "$2" in
                 "")
-                    shift 2  
+                    shift 2
                     ;;
                 *)
                     exporter_port="$2"
@@ -176,7 +176,7 @@ message="start exporter"
 echo "[INFO] Message: $message"
 echo "$(date "+%Y-%m-%d %H:%M:%S") [INFO] Message: $message" >> $LOG_FILE
 
-export LD_LIBRARY_PATH=$PACKAGE_PATH/script/src/oracle_instantclient_basiclite:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$PACKAGE_PATH/src/oracle_instantclient_basiclite:$LD_LIBRARY_PATH
 
 if [ "$oracle_remote_collect" = "false" ]; then
     export DATA_SOURCE_NAME="$oracle_user/$oracle_password@$oracle_sid"

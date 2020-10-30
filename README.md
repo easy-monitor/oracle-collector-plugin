@@ -44,6 +44,7 @@ EasyOps Oracle 监控插件包是适用于 EasyOps 新版监控平台，专门�
 ```SQL
 GRANT SELECT ON V$SESSION TO ${ORACLE_USER}
 ```
+4. 从 https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html 下载oracle驱动包， 并解压到 script/src/oracle_instantclient_basiclite目录。(实际测试 instantclient 18.5.0.0.0 版本在 centos6, centos7 上测试运行通过)
 
 ## 使用方法
 
